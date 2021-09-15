@@ -1,7 +1,7 @@
 # CRUD operations
 
 Tiny node.js kata of performing CRUD(Create/Read/Update/Delete) operations on
-public API: `https://jsonplaceholder.typicode.com`.
+public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com).
 
 ## Dependencies
 
