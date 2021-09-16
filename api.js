@@ -6,6 +6,9 @@ const RESOURCES = {
     photos: URL + "/photos",
     todos: URL + "/todos",
     users: URL + "/users",
-}
+};
 
-export {URL, RESOURCES};
+module.exports = {
+    URL: URL,
+    RESOURCES: RESOURCES,
+}
