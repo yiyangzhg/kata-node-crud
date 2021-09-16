@@ -1,5 +1,7 @@
 # CRUD operations
 
+[![Test](https://github.com/yiyangzhg/kata-node-crud/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/yiyangzhg/kata-node-crud/actions/workflows/node.js.yml)
+
 Tiny node.js kata of performing CRUD(Create/Read/Update/Delete) operations on
 public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com).
 
