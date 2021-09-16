@@ -1,37 +1,34 @@
-import fetch from "node-fetch";
-import {RESOURCES} from "./api.js";
+const fetch = require("node-fetch");
+const api = require("./api");
 
-async function getJson(url) {
+async function getRequest(url) {
     const response = await fetch(url);
     return await response.json();
 }
 
-function getPosts() {
-    let url = RESOURCES.posts;
-    getJson(url).then(data => console.log(data));
+async function getPosts() {
+    const url = api.RESOURCES.posts;
+    let data = await getRequest(url);
+    console.log(data);
+    return data;
 }
 
-function getPostWithPostId(postId) {
-    let url = RESOURCES.posts + "/" + postId;
-    getJson(url).then(data => console.log(data));
+async function getPostWithPostId(postId) {
+    const url = api.RESOURCES.posts + "/" + postId;
+    let data = await getRequest(url);
+    console.log(data);
+    return data;
 }
 
-function getPostsWithUserId(userId) {
-    let url = RESOURCES.posts + "?userId=" + userId;
-    getJson(url).then(data => console.log(data));
+async function getPostsWithUserId(userId) {
+    const url = api.RESOURCES.posts + "?userId=" + userId;
+    let data = await getRequest(url);
+    console.log(data);
+    return data;
 }
 
-function getComments() {
-    let url = RESOURCES.comments;
-    getJson(url).then(data => console.log(data));
-}
-
-function getCommentWithCommentId(commentId) {
-    let url = RESOURCES.comments + "/" + commentId;
-    getJson(url).then(data => console.log(data));
-}
-
-function getCommentsWithPostId(postId) {
-    let url = RESOURCES.posts + "/" + postId + "/comments";
-    getJson(url).then(data => console.log(data));
-}
+module.exports = {
+    getPosts: getPosts,
+    getPostWithPostId: getPostWithPostId,
+    getPostsWithUserId: getPostsWithUserId,
+};
