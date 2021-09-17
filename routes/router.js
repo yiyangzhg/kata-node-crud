@@ -1,10 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const read = require("./services/read");
-const createController = require("./controllers/create.controllers");
-const readController = require("./controllers/read.controllers");
-const updateController = require("./controllers/update.controllers");
-const deleteController = require("./controllers/delete.controllers");
+const read = require("../services/read");
+const createController = require("../controllers/create.controllers");
+const readController = require("../controllers/read.controllers");
+const updateController = require("../controllers/update.controllers");
+const deleteController = require("../controllers/delete.controllers");
 
 const router = express.Router()
 const urlencodedParser = bodyParser.urlencoded({extended: false});

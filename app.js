@@ -1,6 +1,6 @@
 const express = require("express");
 const methodOverride = require("method-override");
-const router = require("./router");
+const router = require("./routes/router");
 
 const app = express();
 const PORT = 3000;
