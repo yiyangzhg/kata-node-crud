@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Read</title>
+
+    <%- include("../partials/bootstrap.css.ejs"); %>
+</head>
+<body>
+    <header>
+        <%- include("../partials/nav"); %>
+    </header>
+
+    <h1 style="padding: 0.5em 1em 0 1em">Hello Read!</h1>
+    <hr>
+
+    <section style="padding: 0.8em">
+        <form action="/posts" method="GET">
+            <button type="submit" class="btn btn-primary">Get all posts</button>
+        </form>
+        <hr>
+        <form class="row g-3" action="/posts" method="GET">
+            <div class="col-md-12">
+                <label for="inputPostId" class="form-label">Post Id</label>
+                <input type="number" min="1" class="form-control" id="inputPostId" name="postId" value="1" required>
+       </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Get post with id</button>
+            </div>
+        </form>
+        <hr>
+        <form class="row g-3" action="/posts" method="GET">
+            <div class="col-md-12">
+                <label for="inputUserId" class="form-label">User Id</label>
+                <input type="number" min="1" class="form-control" id="inputUserId" name="userId" value="1" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Get post with userId</button>
+            </div>
+        </form>
+    </section>
+
+    <%- include("../partials/bootstrap.js.ejs"); %>
+</body>
+</html>
