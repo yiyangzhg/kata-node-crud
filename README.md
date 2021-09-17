@@ -13,4 +13,10 @@ public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typic
 - [body-parser](https://www.npmjs.com/package/body-parser)
 - [method-override](https://www.npmjs.com/package/method-override)
 
-## Usage (TODO)
+## Usage
+
+```shell
+$ git clone https://github.com/yiyangzhg/kata-node-crud.git
+$ cd kata-node-crud
+$ npm run build
+```

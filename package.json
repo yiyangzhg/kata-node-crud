@@ -11,6 +11,7 @@
     "mocha": "^9.1.1"
   },
   "scripts": {
+    "build": "node app",
     "test": "mocha"
   },
   "name": "kata-node-crud",
