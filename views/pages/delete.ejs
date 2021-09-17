@@ -15,6 +15,19 @@
     </header>
 
     <h1 style="padding: 0.5em 1em 0 1em">Hello Delete!</h1>
+    <hr>
+
+    <section style="padding: 0.8em">
+        <form class="row g-3" action="/posts?_method=DELETE" method="POST">
+            <div class="col-md-12">
+                <label for="inputPostId" class="form-label">Post Id</label>
+                <input type="number" min="1" max="100" class="form-control" id="inputPostId" name="postId" value="1" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    </section>
 
     <%- include("../partials/bootstrap.js.ejs"); %>
 </body>

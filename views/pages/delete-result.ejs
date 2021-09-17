@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete result</title>
+
+    <%- include("../partials/bootstrap.css.ejs"); %>
+</head>
+<body>
+    <header>
+        <%- include("../partials/nav"); %>
+    </header>
+
+    <h1 style="padding: 0.5em 1em 0 1em">Result</h1>
+    <hr>
+
+    <section style="padding: 0.8em">
+        <% if (status === 200) { %>
+            <p>Post <%= postId %> has been deleted!</p>
+        <% } else { %>
+            <p>Oops, something went wrong while deleting post <%= postId %></p>
+        <% } %>
+    </section>
+
+    <%- include("../partials/bootstrap.js.ejs"); %>
+</body>
+</html>

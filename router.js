@@ -1,7 +1,9 @@
 const express = require("express");
-const read = require("./read");
 const bodyParser = require("body-parser");
 const create = require("./create");
+const read = require("./read");
+const update = require("./update");
+const del = require("./delete");
 
 const router = express.Router()
 const jsonParser = bodyParser.json();
@@ -44,5 +46,11 @@ router.get("/update", (req, res) => {
 router.get("/delete", (req, res) => {
     res.render("pages/delete.ejs");
 });
+
+router.delete("/posts", urlencodedParser, async (req, res) => {
+    const {postId} = req.body;
+    const resOrg = await del.deletePostWithPostId(postId);
+    res.render("pages/delete-result.ejs", {postId: postId, status: resOrg.status});
+})
 
 module.exports = router;
