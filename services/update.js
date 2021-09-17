@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const api = require("../api");
+const api = require("../utils/api");
 
 async function putRequest(url, data) {
     const response = await fetch(url, {
