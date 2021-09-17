@@ -10,5 +10,6 @@ public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typic
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 - [express](https://www.npmjs.com/package/express)
 - [ejs](https://www.npmjs.com/package/ejs)
+- [body-parser](https://www.npmjs.com/package/body-parser)
 
 ## Usage (TODO)
