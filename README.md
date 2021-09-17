@@ -8,5 +8,7 @@ public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typic
 ## Dependencies
 
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
+- [express](https://www.npmjs.com/package/express)
+- [ejs](https://www.npmjs.com/package/ejs)
 
 ## Usage (TODO)

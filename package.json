@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "node-fetch": "^2.6.2"
   },
   "devDependencies": {
@@ -8,5 +10,22 @@
   },
   "scripts": {
     "test": "mocha"
-  }
+  },
+  "name": "kata-node-crud",
+  "description": "A kata of performing CRUD operations in node.js",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yiyangzhg/kata-node-crud.git"
+  },
+  "author": "Yiyang ZHONG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yiyangzhg/kata-node-crud/issues"
+  },
+  "homepage": "https://github.com/yiyangzhg/kata-node-crud#readme"
 }
