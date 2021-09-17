@@ -18,6 +18,7 @@ public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typic
 ```shell
 $ git clone https://github.com/yiyangzhg/kata-node-crud.git
 $ cd kata-node-crud
+$ npm install
 $ npm run build
 ```
 
