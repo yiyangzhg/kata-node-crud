@@ -18,13 +18,21 @@
     <hr>
 
     <section style="padding: 0.8em">
-        <form class="row g-3" action="/posts" method="GET">
-            <div class="col-md-12">
-                <label for="inputPostId" class="form-label">Post Id</label>
-                <input type="number" min="1" class="form-control" id="inputPostId" name="postId" value="1" required>
+        <form class="row g-3" action="/posts" method="POST">
+            <div class="mb-3">
+                <label for="inputTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="inputTitle" placeholder="Title of the post" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputBody" class="form-label">Post content</label>
+                <textarea class="form-control" id="inputBody" rows="3" name="body"></textarea>
             </div>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Get post with id</button>
+                <label for="inputUserId" class="form-label">User Id</label>
+                <input type="number" min="1" max="10" class="form-control" id="inputUserId" name="userId" value="1" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Create</button>
             </div>
         </form>
     </section>
