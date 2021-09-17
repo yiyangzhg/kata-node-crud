@@ -1,10 +1,12 @@
 const express = require("express");
+const methodOverride = require("method-override");
 const router = require("./router");
 
 const app = express();
 const PORT = 3000;
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
+app.use(methodOverride("_method"))
 app.use(router);
 
 app.listen(PORT, () => {
