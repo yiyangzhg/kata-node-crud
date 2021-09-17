@@ -20,3 +20,9 @@ $ git clone https://github.com/yiyangzhg/kata-node-crud.git
 $ cd kata-node-crud
 $ npm run build
 ```
+
+## Features
+
+- 4 business logics: Create/Read/Update/Delete for API: https://jsonplaceholder.typicode.com/
+- The return JSON results are logged to the console
+- A tiny express application rendering EJS templates that allow you to input the parameters and print the result on the web page as well
