@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const update = require("../update");
+const update = require("../services/update");
 
 describe("Update operation", function () {
 

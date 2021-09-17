@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const create = require("../create");
+const create = require("../services/create");
 
 describe("Create operation", function () {
 

@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const del = require("../delete");
+const del = require("../services/delete");
 
 describe("Delete operation", function () {
 

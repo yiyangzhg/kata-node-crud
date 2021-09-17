@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-const read = require("../read");
+const read = require("../services/read");
 
 describe("Read operation", function () {
 

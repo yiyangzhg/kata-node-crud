@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const create = require("./create");
-const read = require("./read");
-const update = require("./update");
-const del = require("./delete");
+const create = require("./services/create");
+const read = require("./services/read");
+const update = require("./services/update");
+const del = require("./services/delete");
 
 const router = express.Router()
 const jsonParser = bodyParser.json();
