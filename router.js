@@ -39,8 +39,16 @@ router.get("/posts", async (req, res) => {
     res.render("pages/read-result.ejs", {data: JSON.stringify(data, null, 2)});
 });
 
-router.get("/update", (req, res) => {
-    res.render("pages/update.ejs");
+router.get("/update", async (req, res) => {
+    const postId = 1;
+    const data = await read.getPostWithPostId(1);
+    res.render("pages/update.ejs", {data: data});
+});
+
+router.put("/posts", urlencodedParser, async (req, res) => {
+    const {postId, title, body, userId} = req.body;
+    const data = await update.updatePostWithPostId(postId, title, body, userId);
+    res.render("pages/update-result.ejs", {data: JSON.stringify(data, null, 2)});
 });
 
 router.get("/delete", (req, res) => {

@@ -15,6 +15,53 @@
     </header>
 
     <h1 style="padding: 0.5em 1em 0 1em">Hello Update!</h1>
+    <hr>
+
+    <script>
+        async function resetPostData(postId) {
+            const res = await fetch("https://jsonplaceholder.typicode.com/posts/" + postId);
+            if (res.status === 404) {
+                document.getElementById("inputTitle").setAttribute("disabled", "true");
+                document.getElementById("inputBody").setAttribute("disabled", "true");
+                document.getElementById("inputUserId").setAttribute("disabled", "true");
+                document.getElementById("update-btn").setAttribute("disabled", "true");
+            } else {
+                document.getElementById("inputTitle").removeAttribute("disabled");
+                document.getElementById("inputBody").removeAttribute("disabled");
+                document.getElementById("inputUserId").removeAttribute("disabled");
+                document.getElementById("update-btn").removeAttribute("disabled");
+            }
+            const data = await res.json();
+            document.getElementById("inputTitle").setAttribute("value", data.title);
+            document.getElementById("inputBody").innerHTML = data.body;
+            document.getElementById("inputUserId").setAttribute("value", data.userId);
+        }
+    </script>
+
+    <section style="padding: 0.8em">
+        <form class="row g-3" action="/posts?_method=PUT" method="POST">
+            <div class="col-md-12">
+                <label for="inputPostId" class="form-label">Post Id</label>
+                <input class="form-control" id="inputPostId" max="100" min="1" name="postId" oninput="resetPostData(this.value)"
+                       required type="number" value="<%= data.id %>">
+            </div>
+            <div class="mb-3">
+                <label for="inputTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="inputTitle" placeholder="Title of the post" name="title" value="<%= data.title %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputBody" class="form-label">Post content</label>
+                <textarea class="form-control" id="inputBody" rows="3" name="body" required><%= data.body %></textarea>
+            </div>
+            <div class="col-md-12">
+                <label for="inputUserId" class="form-label">User Id</label>
+                <input type="number" min="1" max="10" class="form-control" id="inputUserId" name="userId" value="<%= data.userId %>" required>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" id="update-btn">Update</button>
+            </div>
+        </form>
+    </section>
 
     <%- include("../partials/bootstrap.js.ejs"); %>
 </body>
