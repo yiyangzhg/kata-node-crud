@@ -25,7 +25,7 @@
         <form class="row g-3" action="/posts" method="GET">
             <div class="col-md-12">
                 <label for="inputPostId" class="form-label">Post Id</label>
-                <input type="number" min="1" class="form-control" id="inputPostId" name="postId" value="1" required>
+                <input type="number" min="1" max="100" class="form-control" id="inputPostId" name="postId" value="1" required>
        </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Get post with id</button>
@@ -35,7 +35,7 @@
         <form class="row g-3" action="/posts" method="GET">
             <div class="col-md-12">
                 <label for="inputUserId" class="form-label">User Id</label>
-                <input type="number" min="1" class="form-control" id="inputUserId" name="userId" value="1" required>
+                <input type="number" min="1" max="10" class="form-control" id="inputUserId" name="userId" value="1" required>
             </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Get post with userId</button>
