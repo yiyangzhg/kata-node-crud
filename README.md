@@ -11,5 +11,6 @@ public API: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typic
 - [express](https://www.npmjs.com/package/express)
 - [ejs](https://www.npmjs.com/package/ejs)
 - [body-parser](https://www.npmjs.com/package/body-parser)
+- [method-override](https://www.npmjs.com/package/method-override)
 
 ## Usage (TODO)
